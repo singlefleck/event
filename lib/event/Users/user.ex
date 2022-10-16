@@ -3,13 +3,14 @@ defmodule Event.UsersSchema.User do
   import Ecto.Changeset
 
   schema "user" do
-    field :user_name, :string
+    field :name, :string
+    filed(:age, :integer, default: 0)
 
     timestamps()
   end
 
   def changeset(user, attrs \\ %{}) do
     user
-    |> cast(attrs, [:user_name])
+    |> cast(attrs, [:name, :age])
   end
 end
