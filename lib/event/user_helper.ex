@@ -17,4 +17,10 @@ defmodule Event.UserSchema do
   def get_user_by_name(name) do
     Repo.get_by(User, name: name)
   end
+
+  def delete_user_by_name(name) do
+    user_data = get_user_by_name(name)
+
+    Repo.delete(user_data)
+  end
 end

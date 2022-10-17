@@ -5,6 +5,7 @@ defmodule Event.UserSchema.User do
   schema "user" do
     field :name, :string
     field :age, :integer
+    timestamps()
   end
 
   def changeset(user, attrs \\ %{}) do
