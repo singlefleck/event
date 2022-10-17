@@ -1,5 +1,5 @@
 defmodule Event.UserSchema do
-  import Ecto.Query
+  import Ecto.Query, warn: false
 
   alias Event.UserSchema.User
   alias Event.Repo
@@ -8,7 +8,7 @@ defmodule Event.UserSchema do
     Repo.all(User)
   end
 
-  def create_user(attrs \\ %{}) do
+  def create_user(attrs) do
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert()

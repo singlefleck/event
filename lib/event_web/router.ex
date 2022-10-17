@@ -20,6 +20,13 @@ defmodule EventWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", EventWeb do
+    pipe_through :api
+
+    post "/event/user/add", UserController, :create_user
+    delete "/event/user/detele_by", UserController, :delete_user
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", EventWeb do
   #   pipe_through :api

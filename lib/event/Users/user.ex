@@ -8,7 +8,7 @@ defmodule Event.UserSchema.User do
     timestamps()
   end
 
-  def changeset(user, attrs \\ %{}) do
+  def changeset(user, attrs) do
     user
     |> cast(attrs, [:name, :age])
   end
