@@ -25,6 +25,7 @@ defmodule EventWeb.Router do
 
     post "/event/user/add", UserController, :create_user
     delete "/event/user/detele_by", UserController, :delete_user
+    get "/event/user/get", UserController, :get_user
   end
 
   # Other scopes may use custom stacks.
