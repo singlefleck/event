@@ -11,9 +11,10 @@ defmodule Event.EventSchema.Event do
     field :event_time, :utc_datetime
     field :event_attendees, :string
     field :event_duration, :utc_datetime
+    timestamps()
   end
 
-  def changeset(event, attrs \\ %{}) do
+  def changeset(event, attrs) do
     event
     |> cast(attrs, [
       :event_discription,
