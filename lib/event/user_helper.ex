@@ -23,4 +23,11 @@ defmodule Event.UserSchema do
 
     Repo.delete(user_data)
   end
+
+  p = %{:b => "qwe", "a" => "qwe"}
+
+  def lit(attrs) do
+    %{:b => v1} = attrs
+    Enum.reduce(attrs, [], fn x, acc -> [Enum.map()] ++ acc end)
+  end
 end

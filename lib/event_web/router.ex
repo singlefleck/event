@@ -29,7 +29,7 @@ defmodule EventWeb.Router do
     get "/event/all_users", UserController, :all_users
 
     post "/event/create", EventController, :create_event
-    get "/event/test", UserController, :test
+    get "/event/test", EventController, :test
   end
 
   # Other scopes may use custom stacks.
